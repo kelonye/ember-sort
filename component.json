@@ -1,0 +1,15 @@
+{
+  "name": "ember-sort",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Sort DS.RecordArray",
+  "dependencies": {
+    "kelonye/ember": "*"
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}
