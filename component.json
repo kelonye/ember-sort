@@ -2,7 +2,7 @@
   "name": "ember-sort",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Sort DS.RecordArray",
+  "description": "Sort DS.RecordArrays",
   "dependencies": {
     "kelonye/ember": "*"
   },
