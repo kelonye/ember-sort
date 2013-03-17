@@ -6,10 +6,7 @@
   "dependencies": {
     "kelonye/ember": "*"
   },
-  "development": {
-    "component/assert": "*"
-  },
   "scripts": [
-    "index.js"
+    "lib/index.js"
   ]
 }
