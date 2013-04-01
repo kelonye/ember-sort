@@ -7,6 +7,7 @@
     "kelonye/ember": "*"
   },
   "scripts": [
+    "index.js",
     "lib/index.js"
   ]
 }
