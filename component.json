@@ -1,5 +1,6 @@
 {
   "name": "ember-sort",
+  "repo": "kelonye/ember-sort",
   "version": "0.0.1",
   "license": "MIT",
   "description": "Sort DS.RecordArrays",
