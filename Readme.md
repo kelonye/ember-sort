@@ -10,9 +10,10 @@ Usage
 ---
 
 ```
-Em.ArrayController.extend require('ember-sort'),
-  sortProperties: ['score']
+Em.ArrayController.extend(require('ember-sort'), {
+  sortProperties: ['score'],
   sortAscending: true
+});
 ```
 
 License
