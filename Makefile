@@ -1,15 +1,20 @@
-all: node_modules lib lib/index.js
+component = ./node_modules/component-hooks/node_modules/.bin/component
 
-node_modules: package.json
+default: node_modules components public
+
+node_modules:
 	@npm install
 
-lib:
-	@mkdir -p lib
+components:
+	@$(component) install --dev
 
-lib/index.js: src/index.coffee
-	coffee -bcj $@ $<
+public: lib/index.js
+	@$(component) build --dev -n $@ -o $@
+
+example: default
+	@xdg-open example/index.html
 
 clean:
-	@rm -rf lib
+	@rm -rf public
 
-.PHONY: clean
+.PHONY: clean example

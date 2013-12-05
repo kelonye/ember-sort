@@ -1,9 +1,9 @@
 {
   "name": "ember-sort",
   "version": "0.0.1",
-  "description": "Sort DS.RecordArrays",
+  "description": "Sort Ember Objects",
   "license": "MIT",
   "devDependencies": {
-    "component": "*"
+    "component-hooks": "*"
   }
 }

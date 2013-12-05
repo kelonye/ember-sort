@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      span{
+        color: green;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../public/public.js"></script>
+
+    <script data-template-name='index' type='text/x-handlebars'>
+    <div>
+      <em>Sort by: </em>
+      <span {{action 'byName'}}>name</span>/
+      <span {{action 'byLength'}}>length</span>
+      &nbsp;&nbsp;
+      <span {{action 'byASC'}}>desc<>asc</span>
+    </div>
+    <div>
+      <ol>
+      {{#each sortedContent}}
+      <li>{{name}}</li>
+      {{/each}}
+      </ol>
+    </div>
+
+    </script>
+
+    <script type="text/javascript">
+
+      var mixin = require('ember-sort');
+      var compile = Em.Handlebars.compile;
+      
+      var App = Em.Application.create();
+      App.IndexController = Em.ArrayController.extend(mixin, {
+        sortAscending: true,
+        content: ['ember', 'redis', 'express', 'mocha'].map(function(lib){
+          return Em.Object.create({
+            name: lib,
+            len: lib.length
+          });
+        }),
+        sortProperties: ['name'],
+        actions: {
+          byName: function(){
+            this.set('sortProperties', ['name']);
+          },
+          byLength: function(){
+            this.set('sortProperties', ['len']);
+          },
+          byASC: function(){
+            this.toggleProperty('sortAscending');
+          },
+        }
+      });
+
+    </script>
+  </body>
+</html>
