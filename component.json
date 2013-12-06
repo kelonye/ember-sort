@@ -4,7 +4,7 @@
   "description": "Sort Ember Objects",
   "license": "MIT",
   "dependencies": {
-    "kelonye/ember": "*"
+    "kelonye/ember": "1.0.0-rc6"
   },
   "scripts": [
     "index.js",
