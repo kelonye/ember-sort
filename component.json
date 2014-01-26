@@ -1,10 +1,10 @@
 {
   "name": "ember-sort",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sort Ember Objects",
   "license": "MIT",
   "dependencies": {
-    "kelonye/ember": "1.0.0-rc6"
+    "kelonye/ember": "1.2.0"
   },
   "scripts": [
     "index.js",
